@@ -1,0 +1,6 @@
+:scope {
+  --channel: "external";
+  --input-padding-mobile: var(--padding-1);
+  --input-padding-tablet: var(--padding-2);
+  --input-padding-desktop: var(--padding-3);
+}

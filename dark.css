@@ -1,0 +1,9 @@
+:scope {
+  --mode: "dark";
+  --primary-color: var(--white);
+  --primary-foreground-color: var(--black);
+  --background-color: var(--gray-80);
+  --foreground-color: var(--white);
+  --theme-background: var(--dark-theme-background);
+  --theme-foreground: var(--dark-theme-foreground);
+}

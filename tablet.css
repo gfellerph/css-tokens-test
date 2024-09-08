@@ -1,0 +1,4 @@
+:scope {
+  --device: "tablet";
+  --input-padding: var(--input-padding-tablet);
+}

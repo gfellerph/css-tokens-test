@@ -1,0 +1,15 @@
+button {
+  background-color: var(--primary-color);
+  color: var(--primary-foreground-color);
+  padding: var(--input-padding);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.theme-background {
+  background-color: var(--theme-background);
+  color: var(--theme-foreground);
+}

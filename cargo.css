@@ -1,0 +1,7 @@
+:scope {
+  --theme: "cargo";
+  --light-theme-background: var(--green);
+  --dark-theme-background: var(--darkgreen);
+  --light-theme-foreground: var(--lightblue);
+  --dark-theme-foreground: var(--white);
+}
