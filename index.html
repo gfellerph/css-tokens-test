@@ -6,56 +6,56 @@
     <title>Document</title>
 
     <!-- Default styles -->
-    <link rel="stylesheet" href="core.css" />
+    <link rel="stylesheet" href="core/core.css" />
 
     <!-- Device -->
-    <link rel="stylesheet" href="mobile.css" media="(max-width: 599.9999px)" />
+    <link rel="stylesheet" href="semantic/mobile.css" media="(max-width: 599.9999px)" />
     <link
       rel="stylesheet"
-      href="tablet.css"
+      href="semantic/tablet.css"
       media="(min-width: 600px) and (max-width: 1023.9999px)"
     />
-    <link rel="stylesheet" href="desktop.css" media="(min-width: 1024px)" />
+    <link rel="stylesheet" href="semantic/desktop.css" media="(min-width: 1024px)" />
 
     <!-- Mode -->
-    <link rel="stylesheet" href="light.css" id="mode" />
+    <link rel="stylesheet" href="semantic/light.css" id="mode" />
 
     <!-- Theme -->
-    <link rel="stylesheet" href="post.css" id="theme" />
+    <link rel="stylesheet" href="semantic/post.css" id="theme" />
 
     <!-- Channel -->
-    <link rel="stylesheet" href="external.css" id="channel" />
+    <link rel="stylesheet" href="semantic/external.css" id="channel" />
 
     <!-- Components -->
-    <link rel="stylesheet" href="component.css" />
+    <link rel="stylesheet" href="component/component.css" />
   </head>
   <body>
     <select
       name="theme"
       id="theme-select"
-      value="post"
+      value="semantic/post"
       onchange="document.getElementById('theme').setAttribute('href', `${this.value}.css`)"
     >
-      <option value="post">Post</option>
-      <option value="cargo">Cargo</option>
+      <option value="semantic/post">Post</option>
+      <option value="semantic/cargo">Cargo</option>
     </select>
     <select
       name="channel"
-      value="external"
+      value="semantic/external"
       id="channel-select"
       onchange="document.getElementById('channel').setAttribute('href', `${this.value}.css`)"
     >
-      <option value="external">External</option>
-      <option value="internal">Internal</option>
+      <option value="semantic/external">External</option>
+      <option value="semantic/internal">Internal</option>
     </select>
     <select
       name="mode"
       id="mode-select"
-      value="light"
+      value="semantic/light"
       onchange="document.getElementById('mode').setAttribute('href', `${this.value}.css`)"
     >
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
+      <option value="semantic/light">Light</option>
+      <option value="semantic/dark">Dark</option>
     </select>
     <div style="margin-block: 2rem">
       <button>I'ma primary button</button>
