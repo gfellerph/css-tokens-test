@@ -9,16 +9,24 @@
     <link rel="stylesheet" href="core/core.css" />
 
     <!-- Device -->
-    <link rel="stylesheet" href="semantic/mobile.css" media="(max-width: 499.9999px)" />
+    <link
+      rel="stylesheet"
+      href="semantic/mobile.css"
+      media="(max-width: 499.9999px)"
+    />
     <link
       rel="stylesheet"
       href="semantic/tablet.css"
       media="(min-width: 500px) and (max-width: 799.9999px)"
     />
-    <link rel="stylesheet" href="semantic/desktop.css" media="(min-width: 800px)" />
+    <link
+      rel="stylesheet"
+      href="semantic/desktop.css"
+      media="(min-width: 800px)"
+    />
 
     <!-- Mode -->
-    <link rel="stylesheet" href="semantic/light.css" id="mode" />
+    <link rel="stylesheet" href="semantic/modes.css" />
 
     <!-- Theme -->
     <link rel="stylesheet" href="semantic/post.css" id="theme" />
@@ -29,7 +37,7 @@
     <!-- Components -->
     <link rel="stylesheet" href="component/component.css" />
   </head>
-  <body>
+  <body id="body">
     <select
       name="theme"
       id="theme-select"
@@ -51,11 +59,11 @@
     <select
       name="mode"
       id="mode-select"
-      value="semantic/light"
-      onchange="document.getElementById('mode').setAttribute('href', `${this.value}.css`)"
+      value="light"
+      onchange="document.getElementById('body').setAttribute('data-color-mode', `${this.value}`)"
     >
-      <option value="semantic/light">Light</option>
-      <option value="semantic/dark">Dark</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
     </select>
     <div style="margin-block: 2rem">
       <button>I'm a primary button</button>
@@ -86,6 +94,7 @@
         <dt>Channel</dt>
         <dd channel></dd>
       </dl>
+      <button>button on themed bg</button>
     </fieldset>
   </body>
 </html>

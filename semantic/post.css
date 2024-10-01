@@ -1,7 +1,6 @@
 :scope {
   --theme: "post";
-  --light-theme-background: var(--yellow);
-  --dark-theme-background: var(--yellow);
-  --light-theme-foreground: var(--black);
-  --dark-theme-foreground: var(--black);
+  --theme-background: var(--yellow);
+  --theme-background-mode: light;
+  --theme-foreground: var(--black);
 }

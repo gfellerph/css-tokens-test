@@ -7,9 +7,11 @@ button {
 body {
   background-color: var(--background-color);
   color: var(--foreground-color);
+  color-scheme: var(--mode);
 }
 
 .theme-background {
   background-color: var(--theme-background);
   color: var(--theme-foreground);
+  color-scheme: var(--theme-background-mode);
 }

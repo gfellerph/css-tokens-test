@@ -1,0 +1,18 @@
+:root {
+  color-scheme: light dark;
+  --mode: light;
+  --primary-color: light-dark(var(--gray-80), var(--white));
+  --primary-foreground-color: light-dark(var(--white), var(--black));
+  --background-color: light-dark(var(--white), var(--gray-80));
+  --foreground-color: light-dark(var(--black), var(--white));
+}
+
+[data-color-mode="light"] {
+  --mode: light;
+  color-scheme: light;
+}
+
+[data-color-mode="dark"] {
+  --mode: dark;
+  color-scheme: dark;
+}
