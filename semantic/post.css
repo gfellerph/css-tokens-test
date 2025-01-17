@@ -3,4 +3,36 @@
   --theme-background: var(--yellow);
   --theme-background-mode: light;
   --theme-foreground: var(--black);
+
+  --palette-default-background: var(--gray-10);
+  --palette-default-foreground: var(--black);
+  --palette-default-color-scheme: light;
+  --palette-default-bordercolor: var(--gray-60);
+  --palette-default-background-hover: var(--gray-20);
+
+  --palette-alternate-background: var(--gray-20);
+  --palette-alternate-foreground: var(--black);
+  --palette-alternate-color-scheme: light;
+  --palette-alternate-bordercolor: var(--gray-80);
+  --palette-alternate-background-hover: var(--gray-30);
+
+  --palette-accent-background: var(--gray-80);
+  --palette-accent-foreground: var(--white);
+  --palette-accent-color-scheme: dark;
+  --palette-accent-bordercolor: var(--gray-40);
+  --palette-accent-background-hover: var(--gray-70);
+
+  --palette-brand-background: var(--yellow);
+  --palette-brand-foreground: var(--black);
+  --palette-brand-color-scheme: light;
+  --palette-brand-bordercolor: var(--gray-80);
+  --palette-brand-background-hover: var(--dark-yellow);
+
+  --palette-interactive-background: var(--white);
+  --palette-interactive-foreground: var(--black);
+  --palette-interactive-color-scheme: light;
+  --palette-interactive-bordercolor: var(--gray-60);
+  --palette-interactive-background-hover: var(--gray-5);
+
+  --text-accent-foreground: var(--black);
 }

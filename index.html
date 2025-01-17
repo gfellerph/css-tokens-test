@@ -36,65 +36,124 @@
 
     <!-- Components -->
     <link rel="stylesheet" href="component/component.css" />
+
+    <!-- Demo purposes -->
+    <link rel="stylesheet" href="demo.css">
   </head>
-  <body id="body">
-    <select
-      name="theme"
-      id="theme-select"
-      value="semantic/post"
-      onchange="document.getElementById('theme').setAttribute('href', `${this.value}.css`)"
-    >
-      <option value="semantic/post">Post</option>
-      <option value="semantic/cargo">Cargo</option>
-    </select>
-    <select
-      name="channel"
-      value="semantic/external"
-      id="channel-select"
-      onchange="document.getElementById('channel').setAttribute('href', `${this.value}.css`)"
-    >
-      <option value="semantic/external">External</option>
-      <option value="semantic/internal">Internal</option>
-    </select>
-    <select
-      name="mode"
-      id="mode-select"
-      value="light"
-      onchange="document.getElementById('body').setAttribute('data-color-mode', `${this.value}`)"
-    >
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select>
-    <div style="margin-block: 2rem">
-      <button>I'm a primary button</button>
-    </div>
-    <style>
-      [mode]::before {
-        content: var(--mode);
-      }
-      [device]::before {
-        content: var(--device);
-      }
-      [theme]::before {
-        content: var(--theme);
-      }
-      [channel]::before {
-        content: var(--channel);
-      }
-    </style>
-    <fieldset class="theme-background">
-      <legend>Debugger</legend>
-      <dl>
-        <dt>Mode</dt>
-        <dd mode></dd>
-        <dt>Device</dt>
-        <dd device></dd>
-        <dt>Theme</dt>
-        <dd theme></dd>
-        <dt>Channel</dt>
-        <dd channel></dd>
+  <body id="body" class="palette-default">
+    <aside class="palette-brand">
+
+      <div class="container">
+        <select
+          name="theme"
+          id="theme-select"
+          value="semantic/post"
+          onchange="document.getElementById('theme').setAttribute('href', `${this.value}.css`)"
+        >
+          <option value="semantic/post">Post</option>
+          <option value="semantic/cargo">Cargo</option>
+        </select>
+        <select
+          name="channel"
+          value="semantic/external"
+          id="channel-select"
+          onchange="document.getElementById('channel').setAttribute('href', `${this.value}.css`)"
+        >
+          <option value="semantic/external">External</option>
+          <option value="semantic/internal">Internal</option>
+        </select>
+        <select
+          name="mode"
+          id="mode-select"
+          value="light"
+          onchange="document.getElementById('body').setAttribute('data-color-mode', `${this.value}`)"
+        >
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+    </aside>
+
+    <main class="container">
+      <h1>Color concept</h1>
+
+      <h2>Surface colors</h2>
+      <p>Colors to be used as background color for large, non-interactive surfaces like page background, sections, teasers.</p>
+      <dl class="card palette-alternate">
+        <dt><code>post.palettes.[color].background</code></dt>
+        <dd>Background color</dd>
+
+        <dt><code>post.palettes.[color].foreground</code></dt>
+        <dd>Text color</dd>
+
+        <dt><code>post.palettes.[color].border-color</code></dt>
+        <dd>Optional border color, border style and width to be defined by the component.</dd>
+
+        <dt><code>post.palettes.[color].scheme</code></dt>
+        <dd>Either light or dark, depending on the currently resolved background color value</dd>
       </dl>
-      <button>button on themed bg</button>
-    </fieldset>
+      <div class="grid">
+        <div class="card palette-default">
+          <h4>Default</h4>
+          <p>Page or section background.</p>
+          <button>Example button</button>
+        </div>
+        <div class="card palette-alternate">
+          <h4>Alternate</h4>
+          <p>For alternating section backgrounds.</p>
+          <button>Example button</button>
+        </div>
+        <div class="card palette-accent">
+          <h4>Accent</h4>
+          <p>For setting specific highlights on sections or teasers. Should be used sparingly because it draws a lot of attention and is confusing when used more than once in one view.</p>
+          <button>Example button</button>
+        </div>
+        <div class="card palette-brand">
+          <h4 class="text-accent">Brand</h4>
+          <p>For brand colored sections or teasers.</p>
+          <button>Example button</button>
+        </div>
+      </div>
+
+      <h2>Interactive colors</h2>
+      <p>Colors to be used as background color for interactive elements, supporting various states that these elements can be in.</p>
+      <dl class="card palette-alternate">
+        <dt><code>post.palettes.[color].[state].background</code></dt>
+        <dd>Background color for default, hover, active, focused, disabled.</dd>
+
+        <dt><code>post.palettes.[color].[state].foreground</code></dt>
+        <dd>Text color for all states</dd>
+
+        <dt><code>post.palettes.[color].[state].border-color</code></dt>
+        <dd>Optional border color, border style and width to be defined by the component.</dd>
+
+        <dt><code>post.palettes.[color].[state].scheme</code></dt>
+        <dd>Either light or dark, depending on the currently resolved background color value</dd>
+      </dl>
+      <div class="grid">
+        <div class="card palette-default">
+          <h4>Default</h4>
+          <p>Page or section background.</p>
+          <button>Example button</button>
+        </div>
+        <div class="card palette-alternate">
+          <h4>Alternate</h4>
+          <p>For alternating section backgrounds.</p>
+          <button>Example button</button>
+        </div>
+        <div class="card palette-accent">
+          <h4>Accent</h4>
+          <p>For setting specific highlights on sections or teasers. Should be used sparingly because it draws a lot of attention and is confusing when used more than once in one view.</p>
+          <button>Example button</button>
+        </div>
+        <div class="card palette-brand">
+          <h4 class="text-accent">Brand</h4>
+          <p>For brand colored sections or teasers.</p>
+          <button>Example button</button>
+        </div>
+      </div>
+    </main>
+
+
   </body>
 </html>

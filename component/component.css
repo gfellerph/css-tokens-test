@@ -15,3 +15,67 @@ body {
   color: var(--theme-foreground);
   color-scheme: var(--theme-background-mode);
 }
+
+.palette-default {
+  background-color: var(--palette-default-background);
+  color: var(--palette-default-foreground);
+  color-scheme: var(--palette-default-color-scheme);
+  border-color: var(--palette-default-bordercolor);
+  
+
+  &.interactive:hover {
+    background-color: var(--palette-default-background-hover);
+  }
+}
+
+.palette-alternate {
+  background-color: var(--palette-alternate-background);
+  color: var(--palette-alternate-foreground);
+  color-scheme: var(--palette-alternate-color-scheme);
+  border-color: var(--palette-alternate-bordercolor);
+  
+
+  &.interactive:hover {
+    background-color: var(--palette-alternate-background-hover);
+  }
+}
+
+.palette-accent {
+  background-color: var(--palette-accent-background);
+  color: var(--palette-accent-foreground);
+  color-scheme: var(--palette-accent-color-scheme);
+  border-color: var(--palette-accent-bordercolor);
+  
+
+  &.interactive:hover {
+    background-color: var(--palette-accent-background-hover);
+  }
+}
+
+.palette-brand {
+  background-color: var(--palette-brand-background);
+  color: var(--palette-brand-foreground);
+  color-scheme: var(--palette-brand-color-scheme);
+  border-color: var(--palette-brand-bordercolor);
+  
+
+  &.interactive:hover {
+    background-color: var(--palette-brand-background-hover);
+  }
+}
+
+.palette-interactive {
+  background-color: var(--palette-interactive-background);
+  color: var(--palette-interactive-foreground);
+  color-scheme: var(--palette-interactive-color-scheme);
+  border-color: var(--palette-interactive-bordercolor);
+  
+
+  &.interactive:hover {
+    background-color: var(--palette-interactive-background-hover);
+  }
+}
+
+.text-accent {
+  color: var(--text-accent-foreground);
+}

@@ -1,9 +1,11 @@
 :scope {
   --yellow: #fc0;
+  --dark-yellow: rgb(202, 162, 0);
   --lightgreen: lightgreen;
   --green: green;
   --darkgreen: darkgreen;
   --lightblue: lightblue;
+  --dark-lightblue: rgb(112, 166, 184);
   --gray-90: hsl(0 0 10);
   --gray-80: hsl(0 0 20);
   --gray-70: hsl(0 0 30);
@@ -13,6 +15,7 @@
   --gray-30: hsl(0 0 70);
   --gray-20: hsl(0 0 80);
   --gray-10: hsl(0 0 90);
+  --gray-5: hsl(0 0 95);
   --white: #fff;
   --black: #000;
 
