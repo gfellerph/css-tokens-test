@@ -25,8 +25,8 @@
       media="(min-width: 800px)"
     />
 
-    <!-- Mode -->
-    <link rel="stylesheet" href="semantic/modes.css" />
+    <!-- Color scheme -->
+    <link rel="stylesheet" href="semantic/scheme.css" />
 
     <!-- Theme -->
     <link rel="stylesheet" href="semantic/post.css" id="theme" />
@@ -38,11 +38,10 @@
     <link rel="stylesheet" href="component/component.css" />
 
     <!-- Demo purposes -->
-    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="demo.css" />
   </head>
-  <body id="body" class="palette-default">
+  <body id="body" class="palette-default" data-color-scheme="light">
     <aside class="palette-brand">
-
       <div class="container">
         <select
           name="theme"
@@ -66,10 +65,11 @@
           name="mode"
           id="mode-select"
           value="light"
-          onchange="document.getElementById('body').setAttribute('data-color-mode', `${this.value}`)"
+          onchange="document.getElementById('body').setAttribute('data-color-scheme', `${this.value}`)"
         >
           <option value="light">Light</option>
           <option value="dark">Dark</option>
+          <option value="auto">Auto</option>
         </select>
       </div>
     </aside>
@@ -78,8 +78,11 @@
       <h1>Color concept</h1>
 
       <h2>Surface colors</h2>
-      <p>Colors to be used as background color for large, non-interactive surfaces like page background, sections, teasers.</p>
-      <dl class="card palette-alternate">
+      <p>
+        Colors to be used as background color for large, non-interactive
+        surfaces like page background, sections, teasers.
+      </p>
+      <!-- <dl class="card palette-alternate">
         <dt><code>post.palettes.[color].background</code></dt>
         <dd>Background color</dd>
 
@@ -87,16 +90,31 @@
         <dd>Text color</dd>
 
         <dt><code>post.palettes.[color].border-color</code></dt>
-        <dd>Optional border color, border style and width to be defined by the component.</dd>
+        <dd>
+          Optional border color, border style and width to be defined by the
+          component.
+        </dd>
 
         <dt><code>post.palettes.[color].scheme</code></dt>
-        <dd>Either light or dark, depending on the currently resolved background color value</dd>
-      </dl>
+        <dd>
+          Either light or dark, depending on the currently resolved background
+          color value
+        </dd>
+      </dl> -->
       <div class="grid">
         <div class="card palette-default">
           <h4>Default</h4>
           <p>Page or section background.</p>
           <button>Example button</button>
+          <div class="card palette-accent">
+            <h4>Accent</h4>
+            <p>
+              For setting specific highlights on sections or teasers. Should be
+              used sparingly because it draws a lot of attention and is
+              confusing when used more than once in one view.
+            </p>
+            <button>Example button</button>
+          </div>
         </div>
         <div class="card palette-alternate">
           <h4>Alternate</h4>
@@ -105,8 +123,78 @@
         </div>
         <div class="card palette-accent">
           <h4>Accent</h4>
-          <p>For setting specific highlights on sections or teasers. Should be used sparingly because it draws a lot of attention and is confusing when used more than once in one view.</p>
+          <p>
+            For setting specific highlights on sections or teasers. Should be
+            used sparingly because it draws a lot of attention and is confusing
+            when used more than once in one view.
+          </p>
           <button>Example button</button>
+          <div class="card palette-default">
+            <h4>Default</h4>
+            <p>Page or section background.</p>
+            <button>Example button</button>
+          </div>
+        </div>
+        <div class="card palette-brand">
+          <h4 class="text-accent">Brand</h4>
+          <p>For brand colored sections or teasers.</p>
+          <button>Example button</button>
+        </div>
+      </div>
+
+      <h4>Palette accent</h4>
+      <div class="grid palette-accent" style="padding: 2rem">
+        <div class="card palette-default">
+          <h4>Default</h4>
+          <p>Page or section background.</p>
+          <button>Example button</button>
+          <div class="card palette-accent">
+            <h4>Accent</h4>
+            <p>
+              For setting specific highlights on sections or teasers. Should be
+              used sparingly because it draws a lot of attention and is
+              confusing when used more than once in one view.
+            </p>
+            <button>Example button</button>
+          </div>
+        </div>
+        <div class="card palette-alternate">
+          <h4>Alternate</h4>
+          <p>For alternating section backgrounds.</p>
+          <button>Example button</button>
+          <div class="card palette-default">
+            <h4>Default</h4>
+            <p>Page or section background.</p>
+            <button>Example button</button>
+          </div>
+          <div class="card palette-brand">
+            <h4 class="text-accent">Brand</h4>
+            <p>For brand colored sections or teasers.</p>
+            <button>Example button</button>
+          </div>
+          <div class="card palette-accent">
+            <h4>Accent</h4>
+            <p>
+              For setting specific highlights on sections or teasers. Should be
+              used sparingly because it draws a lot of attention and is
+              confusing when used more than once in one view.
+            </p>
+            <button>Example button</button>
+          </div>
+        </div>
+        <div class="card palette-accent">
+          <h4>Accent</h4>
+          <p>
+            For setting specific highlights on sections or teasers. Should be
+            used sparingly because it draws a lot of attention and is confusing
+            when used more than once in one view.
+          </p>
+          <button>Example button</button>
+          <div class="card palette-default">
+            <h4>Default</h4>
+            <p>Page or section background.</p>
+            <button>Example button</button>
+          </div>
         </div>
         <div class="card palette-brand">
           <h4 class="text-accent">Brand</h4>
@@ -116,7 +204,10 @@
       </div>
 
       <h2>Interactive colors</h2>
-      <p>Colors to be used as background color for interactive elements, supporting various states that these elements can be in.</p>
+      <p>
+        Colors to be used as background color for interactive elements,
+        supporting various states that these elements can be in.
+      </p>
       <dl class="card palette-alternate">
         <dt><code>post.palettes.[color].[state].background</code></dt>
         <dd>Background color for default, hover, active, focused, disabled.</dd>
@@ -125,10 +216,16 @@
         <dd>Text color for all states</dd>
 
         <dt><code>post.palettes.[color].[state].border-color</code></dt>
-        <dd>Optional border color, border style and width to be defined by the component.</dd>
+        <dd>
+          Optional border color, border style and width to be defined by the
+          component.
+        </dd>
 
         <dt><code>post.palettes.[color].[state].scheme</code></dt>
-        <dd>Either light or dark, depending on the currently resolved background color value</dd>
+        <dd>
+          Either light or dark, depending on the currently resolved background
+          color value
+        </dd>
       </dl>
       <div class="grid">
         <div class="card palette-default">
@@ -143,8 +240,18 @@
         </div>
         <div class="card palette-accent">
           <h4>Accent</h4>
-          <p>For setting specific highlights on sections or teasers. Should be used sparingly because it draws a lot of attention and is confusing when used more than once in one view.</p>
+          <p>
+            For setting specific highlights on sections or teasers. Should be
+            used sparingly because it draws a lot of attention and is confusing
+            when used more than once in one view.
+          </p>
           <button>Example button</button>
+
+          <div class="card palette-default">
+            <h4>Default</h4>
+            <p>Page or section background.</p>
+            <button>Example button</button>
+          </div>
         </div>
         <div class="card palette-brand">
           <h4 class="text-accent">Brand</h4>
@@ -153,7 +260,5 @@
         </div>
       </div>
     </main>
-
-
   </body>
 </html>

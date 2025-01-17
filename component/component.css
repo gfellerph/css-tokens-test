@@ -1,81 +1,108 @@
 button {
-  background-color: var(--primary-color);
-  color: var(--primary-foreground-color);
+  background-color: var(--palette-primary-background);
+  color: var(--palette-primary-foreground);
+  border-color: var(--palette-primary-border-color);
+  border-width: 2px;
+  border-style: solid;
   padding: var(--input-padding);
+  transition: background-color 150ms;
+
+  font: inherit;
+  font-weight: 700;
+  border-radius: 1000px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--palette-primary-background-hover);
+    color: var(--palette-primary-foreground-hover);
+    border-color: var(--palette-primary-border-color-hover);
+  }
+
+  &:focus {
+    background-color: var(--palette-primary-background-focus);
+    color: var(--palette-primary-foreground-focus);
+    border-color: var(--palette-primary-border-color-focus);
+  }
+
+  &:active {
+    background-color: var(--palette-primary-background-active);
+    color: var(--palette-primary-foreground-active);
+    border-color: var(--palette-primary-border-color-active);
+  }
+
+  :disabled {
+    background-color: var(--palette-primary-background-disabled);
+    color: var(--palette-primary-foreground-disabled);
+    border-color: var(--palette-primary-border-color-disabled);
+  }
 }
 
-body {
-  background-color: var(--background-color);
-  color: var(--foreground-color);
-  color-scheme: var(--mode);
-}
-
-.theme-background {
-  background-color: var(--theme-background);
-  color: var(--theme-foreground);
-  color-scheme: var(--theme-background-mode);
+*:focus {
+  outline: 2px solid var(--palette-default-foreground);
+  outline-offset: 2px;
 }
 
 .palette-default {
   background-color: var(--palette-default-background);
   color: var(--palette-default-foreground);
-  color-scheme: var(--palette-default-color-scheme);
-  border-color: var(--palette-default-bordercolor);
-  
+  border-color: var(--palette-default-border-color);
 
-  &.interactive:hover {
-    background-color: var(--palette-default-background-hover);
+  &
+    > *:not(
+      .palette-default,
+      .palette-alternate,
+      .palette-accent,
+      .palette-brand
+    ) {
+    color-scheme: var(--palette-default-color-scheme);
   }
 }
 
 .palette-alternate {
   background-color: var(--palette-alternate-background);
   color: var(--palette-alternate-foreground);
-  color-scheme: var(--palette-alternate-color-scheme);
-  border-color: var(--palette-alternate-bordercolor);
-  
+  border-color: var(--palette-alternate-border-color);
 
-  &.interactive:hover {
-    background-color: var(--palette-alternate-background-hover);
+  &
+    > *:not(
+      .palette-default,
+      .palette-alternate,
+      .palette-accent,
+      .palette-brand
+    ) {
+    color-scheme: var(--palette-alternate-color-scheme);
   }
 }
 
 .palette-accent {
   background-color: var(--palette-accent-background);
   color: var(--palette-accent-foreground);
-  color-scheme: var(--palette-accent-color-scheme);
-  border-color: var(--palette-accent-bordercolor);
-  
+  border-color: var(--palette-accent-border-color);
 
-  &.interactive:hover {
-    background-color: var(--palette-accent-background-hover);
+  &
+    > *:not(
+      .palette-default,
+      .palette-alternate,
+      .palette-accent,
+      .palette-brand
+    ) {
+    color-scheme: var(--palette-accent-color-scheme);
   }
 }
 
 .palette-brand {
   background-color: var(--palette-brand-background);
   color: var(--palette-brand-foreground);
-  color-scheme: var(--palette-brand-color-scheme);
-  border-color: var(--palette-brand-bordercolor);
-  
+  border-color: var(--palette-brand-border-color);
 
-  &.interactive:hover {
-    background-color: var(--palette-brand-background-hover);
+  &
+    > *:not(
+      .palette-default,
+      .palette-alternate,
+      .palette-accent,
+      .palette-brand
+    ) {
+    color-scheme: var(--palette-brand-color-scheme);
   }
-}
-
-.palette-interactive {
-  background-color: var(--palette-interactive-background);
-  color: var(--palette-interactive-foreground);
-  color-scheme: var(--palette-interactive-color-scheme);
-  border-color: var(--palette-interactive-bordercolor);
-  
-
-  &.interactive:hover {
-    background-color: var(--palette-interactive-background-hover);
-  }
-}
-
-.text-accent {
-  color: var(--text-accent-foreground);
 }
