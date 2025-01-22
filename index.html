@@ -26,7 +26,7 @@
     />
 
     <!-- Color scheme -->
-    <link rel="stylesheet" href="semantic/scheme.css" />
+    <link rel="stylesheet" href="semantic/scheme.css" id="scheme" />
 
     <!-- Theme -->
     <link rel="stylesheet" href="semantic/post.css" id="theme" />
@@ -71,6 +71,14 @@
           <option value="dark">Dark</option>
           <option value="auto">Auto</option>
         </select>
+        <label>
+          <input
+            type="checkbox"
+            id="fallback"
+            onchange="document.getElementById('scheme').setAttribute('href', `${this.value ? document.getElementById('theme-select').value + '-' + this.value : '/semantic/scheme'}.css`)"
+          />
+          <span>Use light-dark fallback</span>
+        </label>
       </div>
     </aside>
 

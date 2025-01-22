@@ -1,10 +1,5 @@
 :root {
   color-scheme: light dark;
-  --mode: light;
-  --primary-color: light-dark(var(--gray-80), var(--white));
-  --primary-foreground-color: light-dark(var(--white), var(--black));
-  --background-color: light-dark(var(--white), var(--gray-80));
-  --foreground-color: light-dark(var(--black), var(--white));
 
   /* Surface Palettes */
 
@@ -63,6 +58,8 @@
     var(--palette-brand-light-border-color),
     var(--palette-brand-dark-border-color)
   );
+
+  /* Interactive Palettes */
 
   /* Primary */
   --palette-primary-background: light-dark(
@@ -143,6 +140,7 @@
   --palette-brand-color-scheme: var(--palette-brand-dark-color-scheme);
 }
 
+/* Optional auto coverage */
 [data-color-scheme="auto"] {
   color-scheme: light dark;
   @media (prefers-color-scheme: light) {

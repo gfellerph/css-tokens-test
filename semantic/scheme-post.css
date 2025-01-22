@@ -1,0 +1,169 @@
+[data-color-scheme="light"],
+[data-color-scheme="dark"]
+  :where(.palette-accent, .palette-brand) /* Need to know inversions per theme (only works for post theme) */
+  > *:not(
+    .palette-default,
+    .palette-accent,
+    .palette-alternate,
+    .palette-brand
+  ) {
+  /* Palette default fallback */
+  --palette-default-background: var(--palette-default-light-background);
+  --palette-default-foreground: var(--palette-default-light-foreground);
+  --palette-default-border-color: var(--palette-default-light-border-color);
+
+  /* Palette alternate fallback */
+  --palette-alternate-background: var(--palette-alternate-light-background);
+  --palette-alternate-foreground: var(--palette-alternate-light-foreground);
+  --palette-alternate-border-color: var(--palette-alternate-light-border-color);
+
+  /* Palette accent fallback */
+  --palette-accent-background: var(--palette-accent-light-background);
+  --palette-accent-foreground: var(--palette-accent-light-foreground);
+  --palette-accent-border-color: var(--palette-accent-light-border-color);
+
+  /* Palette brand fallback */
+  --palette-brand-background: var(--palette-brand-light-background);
+  --palette-brand-foreground: var(--palette-brand-light-foreground);
+  --palette-brand-border-color: var(--palette-brand-light-border-color);
+
+  /* Palette primary fallback */
+  --palette-primary-background: var(--palette-primary-light-background);
+  --palette-primary-foreground: var(--palette-primary-light-foreground);
+  --palette-primary-border-color: var(--palette-primary-light-border-color);
+  --palette-primary-background-hover: var(
+    --palette-primary-light-background-hover
+  );
+  --palette-primary-foreground-hover: var(
+    --palette-primary-light-foreground-hover
+  );
+  --palette-primary-border-color-hover: var(
+    --palette-primary-light-border-color-hover
+  );
+  --palette-primary-background-focus: var(
+    --palette-primary-light-background-focus
+  );
+  --palette-primary-foreground-focus: var(
+    --palette-primary-light-foreground-focus
+  );
+  --palette-primary-border-color-focus: var(
+    --palette-primary-light-border-color-focus
+  );
+  --palette-primary-background-active: var(
+    --palette-primary-light-background-active
+  );
+  --palette-primary-foreground-active: var(
+    --palette-primary-light-foreground-active
+  );
+  --palette-primary-border-color-active: var(
+    --palette-primary-light-border-color-active
+  );
+  --palette-primary-background-disabled: var(
+    --palette-primary-light-background-disabled
+  );
+  --palette-primary-foreground-disabled: var(
+    --palette-primary-light-foreground-disabled
+  );
+  --palette-primary-border-color-disabled: var(
+    --palette-primary-light-border-color-disabled
+  );
+}
+
+[data-color-scheme="dark"],
+[data-color-scheme="light"]
+  :where(.palette-accent) /* Need to know inversions per theme */
+  > *:not(
+    .palette-default,
+    .palette-accent,
+    .palette-alternate,
+    .palette-brand
+  ) {
+  color-scheme: dark;
+  --palette-default-color-scheme: var(--palette-default-dark-color-scheme);
+  --palette-alternate-color-scheme: var(--palette-alternate-dark-color-scheme);
+  --palette-accent-color-scheme: var(--palette-accent-dark-color-scheme);
+  --palette-brand-color-scheme: var(--palette-brand-dark-color-scheme);
+
+  /* Palette default fallback */
+  --palette-default-background: var(--palette-default-dark-background);
+  --palette-default-foreground: var(--palette-default-dark-foreground);
+  --palette-default-border-color: var(--palette-default-dark-border-color);
+
+  /* Palette alternate fallback */
+  --palette-alternate-background: var(--palette-alternate-dark-background);
+  --palette-alternate-foreground: var(--palette-alternate-dark-foreground);
+  --palette-alternate-border-color: var(--palette-alternate-dark-border-color);
+
+  /* Palette accent fallback */
+  --palette-accent-background: var(--palette-accent-dark-background);
+  --palette-accent-foreground: var(--palette-accent-dark-foreground);
+  --palette-accent-border-color: var(--palette-accent-dark-border-color);
+
+  /* Palette brand fallback */
+  --palette-brand-background: var(--palette-brand-dark-background);
+  --palette-brand-foreground: var(--palette-brand-dark-foreground);
+  --palette-brand-border-color: var(--palette-brand-dark-border-color);
+
+  /* Palette primary fallback */
+  --palette-primary-background: var(--palette-primary-dark-background);
+  --palette-primary-foreground: var(--palette-primary-dark-foreground);
+  --palette-primary-border-color: var(--palette-primary-dark-border-color);
+  --palette-primary-background-hover: var(
+    --palette-primary-dark-background-hover
+  );
+  --palette-primary-foreground-hover: var(
+    --palette-primary-dark-foreground-hover
+  );
+  --palette-primary-border-color-hover: var(
+    --palette-primary-dark-border-color-hover
+  );
+  --palette-primary-background-focus: var(
+    --palette-primary-dark-background-focus
+  );
+  --palette-primary-foreground-focus: var(
+    --palette-primary-dark-foreground-focus
+  );
+  --palette-primary-border-color-focus: var(
+    --palette-primary-dark-border-color-focus
+  );
+  --palette-primary-background-active: var(
+    --palette-primary-dark-background-active
+  );
+  --palette-primary-foreground-active: var(
+    --palette-primary-dark-foreground-active
+  );
+  --palette-primary-border-color-active: var(
+    --palette-primary-dark-border-color-active
+  );
+  --palette-primary-background-disabled: var(
+    --palette-primary-dark-background-disabled
+  );
+  --palette-primary-foreground-disabled: var(
+    --palette-primary-dark-foreground-disabled
+  );
+  --palette-primary-border-color-disabled: var(
+    --palette-primary-dark-border-color-disabled
+  );
+}
+
+/* Optional auto coverage */
+[data-color-scheme="auto"] {
+  color-scheme: light dark;
+  @media (prefers-color-scheme: light) {
+    --palette-default-color-scheme: var(--palette-default-light-color-scheme);
+    --palette-alternate-color-scheme: var(
+      --palette-alternate-light-color-scheme
+    );
+    --palette-accent-color-scheme: var(--palette-accent-light-color-scheme);
+    --palette-brand-color-scheme: var(--palette-brand-light-color-scheme);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --palette-default-color-scheme: var(--palette-default-dark-color-scheme);
+    --palette-alternate-color-scheme: var(
+      --palette-alternate-dark-color-scheme
+    );
+    --palette-accent-color-scheme: var(--palette-accent-dark-color-scheme);
+    --palette-brand-color-scheme: var(--palette-brand-dark-color-scheme);
+  }
+}
