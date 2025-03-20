@@ -26,7 +26,7 @@
     />
 
     <!-- Color scheme -->
-    <link rel="stylesheet" href="semantic/scheme.css" id="scheme" />
+    <link rel="stylesheet" href="semantic/scheme-post.css" id="scheme" />
 
     <!-- Theme -->
     <link rel="stylesheet" href="semantic/post.css" id="theme" />
@@ -37,30 +37,28 @@
     <!-- Components -->
     <link rel="stylesheet" href="component/component.css" />
 
+    <link rel="stylesheet" href="component/palette.css" />
+
+    <link rel="stylesheet" href="component/button.css" />
+
     <!-- Demo purposes -->
     <link rel="stylesheet" href="demo.css" />
+
+    <script src="demo.js" defer></script>
   </head>
   <body id="body" class="palette-default" data-color-scheme="light">
     <aside class="palette-brand">
       <div class="container">
-        <select
-          name="theme"
-          id="theme-select"
-          value="semantic/post"
-          onchange="document.getElementById('theme').setAttribute('href', `${this.value}.css`)"
-        >
-          <option value="semantic/post">Post</option>
-          <option value="semantic/cargo">Cargo</option>
+        <select name="theme" id="theme-select" value="semantic/post">
+          <option value="post">Post</option>
+          <option value="cargo">Cargo</option>
         </select>
-        <select
-          name="channel"
-          value="semantic/external"
-          id="channel-select"
-          onchange="document.getElementById('channel').setAttribute('href', `${this.value}.css`)"
-        >
-          <option value="semantic/external">External</option>
-          <option value="semantic/internal">Internal</option>
+
+        <select name="channel" value="semantic/external" id="channel-select">
+          <option value="external">External</option>
+          <option value="internal">Internal</option>
         </select>
+
         <select
           name="mode"
           id="mode-select"
@@ -71,14 +69,6 @@
           <option value="dark">Dark</option>
           <option value="auto">Auto</option>
         </select>
-        <label>
-          <input
-            type="checkbox"
-            id="fallback"
-            onchange="document.getElementById('scheme').setAttribute('href', `${this.value ? document.getElementById('theme-select').value + '-' + this.value : '/semantic/scheme'}.css`)"
-          />
-          <span>Use light-dark fallback</span>
-        </label>
       </div>
     </aside>
 
@@ -164,6 +154,24 @@
               confusing when used more than once in one view.
             </p>
             <button>Example button</button>
+            <div class="card palette-accent">
+              <h4>Accent</h4>
+              <p>
+                For setting specific highlights on sections or teasers. Should
+                be used sparingly because it draws a lot of attention and is
+                confusing when used more than once in one view.
+              </p>
+              <button>Example button</button>
+              <div class="card palette-accent">
+                <h4>Accent</h4>
+                <p>
+                  For setting specific highlights on sections or teasers. Should
+                  be used sparingly because it draws a lot of attention and is
+                  confusing when used more than once in one view.
+                </p>
+                <button>Example button</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card palette-alternate">
@@ -266,6 +274,33 @@
           <p>For brand colored sections or teasers.</p>
           <button>Example button</button>
         </div>
+      </div>
+
+      <h2>Signal colors</h2>
+      <div class="card palette-error">
+        <h4 class="text-accent">Error</h4>
+        <p>For brand colored sections or teasers.</p>
+        <button>Example button</button>
+      </div>
+      <div class="card palette-warning">
+        <h4 class="text-accent">Warning</h4>
+        <p>For brand colored sections or teasers.</p>
+        <button>Example button</button>
+      </div>
+      <div class="card palette-info">
+        <h4 class="text-accent">Info</h4>
+        <p>For brand colored sections or teasers.</p>
+        <button>Example button</button>
+      </div>
+      <div class="card palette-success">
+        <h4 class="text-accent">Success</h4>
+        <p>For brand colored sections or teasers.</p>
+        <button>Example button</button>
+      </div>
+      <div class="card palette-neutral">
+        <h4 class="text-accent">Neutral</h4>
+        <p>For brand colored sections or teasers.</p>
+        <button>Example button</button>
       </div>
     </main>
   </body>

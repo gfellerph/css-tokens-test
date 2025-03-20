@@ -1,13 +1,8 @@
 [data-color-scheme="light"],
-[data-color-scheme="dark"]
-  :where(.palette-accent, .palette-brand) /* Need to know inversions per theme (only works for post theme) */
-  > *:not(
-    .palette-default,
-    .palette-accent,
-    .palette-alternate,
-    .palette-brand
-  ) {
-  /* Palette default fallback */
+/* Need to know inversions per theme (only works for post theme) */
+[data-color-scheme="dark"] :where(.palette-accent, .palette-brand) 
+  > *:not([class|="palette"]) {
+  /* Palette default */
   --palette-default-background: var(--palette-default-light-background);
   --palette-default-foreground: var(--palette-default-light-foreground);
   --palette-default-border-color: var(--palette-default-light-border-color);
@@ -67,18 +62,17 @@
   --palette-primary-border-color-disabled: var(
     --palette-primary-light-border-color-disabled
   );
+
+  /* Palette error */
+  --palette-error-background: var(--palette-error-light-background);
+  --palette-error-foreground: var(--palette-error-light-foreground);
+  --palette-error-border-color: var(--palette-error-light-border-color);
 }
 
 [data-color-scheme="dark"],
 [data-color-scheme="light"]
   :where(.palette-accent) /* Need to know inversions per theme */
-  > *:not(
-    .palette-default,
-    .palette-accent,
-    .palette-alternate,
-    .palette-brand
-  ) {
-  color-scheme: dark;
+  > *:not([class|="palette"]) {
   --palette-default-color-scheme: var(--palette-default-dark-color-scheme);
   --palette-alternate-color-scheme: var(--palette-alternate-dark-color-scheme);
   --palette-accent-color-scheme: var(--palette-accent-dark-color-scheme);
@@ -144,26 +138,9 @@
   --palette-primary-border-color-disabled: var(
     --palette-primary-dark-border-color-disabled
   );
-}
 
-/* Optional auto coverage */
-[data-color-scheme="auto"] {
-  color-scheme: light dark;
-  @media (prefers-color-scheme: light) {
-    --palette-default-color-scheme: var(--palette-default-light-color-scheme);
-    --palette-alternate-color-scheme: var(
-      --palette-alternate-light-color-scheme
-    );
-    --palette-accent-color-scheme: var(--palette-accent-light-color-scheme);
-    --palette-brand-color-scheme: var(--palette-brand-light-color-scheme);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    --palette-default-color-scheme: var(--palette-default-dark-color-scheme);
-    --palette-alternate-color-scheme: var(
-      --palette-alternate-dark-color-scheme
-    );
-    --palette-accent-color-scheme: var(--palette-accent-dark-color-scheme);
-    --palette-brand-color-scheme: var(--palette-brand-dark-color-scheme);
-  }
+  /* Palette error */
+  --palette-error-background: var(--palette-error-light-background);
+  --palette-error-foreground: var(--palette-error-light-foreground);
+  --palette-error-border-color: var(--palette-error-light-border-color);
 }

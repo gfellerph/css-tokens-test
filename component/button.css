@@ -1,0 +1,15 @@
+button {
+  font: inherit;
+  font-weight: 700;
+  border-radius: 1000px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 150ms;
+  border-width: 2px;
+  border-style: solid;
+  padding: var(--input-padding);
+
+  background-color: var(--palette-primary-background);
+  color: var(--palette-primary-foreground);
+  border-color: var(--palette-primary-border-color);
+}

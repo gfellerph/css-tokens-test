@@ -78,5 +78,13 @@
   --palette-primary-dark-foreground-disabled: var(--black);
   --palette-primary-dark-border-color-disabled: transparent;
 
+  /* Error */
+  --palette-error-light-background: var(--post-core-color-notification-red);
+  --palette-error-light-foreground: var(--post-core-color-brand-white);
+  --palette-error-light-border-color: var(--post-core-color-brand-black);
+  --palette-error-dark-background: var(--post-core-color-notification-red);
+  --palette-error-dark-foreground: var(--post-core-color-brand-white);
+  --palette-error-dark-border-color: var(--post-core-color-brand-black);
+
   --text-accent-foreground: var(--black);
 }
