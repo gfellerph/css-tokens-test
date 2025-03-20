@@ -11,12 +11,12 @@
     var(--palette-default-light-border-color),
     var(--palette-default-dark-border-color)
   );
-  @media (prefers-color-scheme: light) {
-    --palette-color-scheme: var(--palette-brand-light-scheme);
+  [data-color-scheme="light"] & {
+    --palette-color-scheme: var(--palette-default-light-scheme);
   }
 
-  @media (prefers-color-scheme: dark) {
-    --palette-color-scheme: var(--palette-brand-dark-scheme);
+  [data-color-scheme="dark"] & {
+    --palette-color-scheme: var(--palette-default-dark-scheme);
   }
 }
 
@@ -33,12 +33,12 @@
     var(--palette-alternate-light-border-color),
     var(--palette-alternate-dark-border-color)
   );
-  @media (prefers-color-scheme: light) {
-    --palette-color-scheme: var(--palette-brand-light-scheme);
+  [data-color-scheme="light"] & {
+    --palette-color-scheme: var(--palette-alternate-light-scheme);
   }
 
-  @media (prefers-color-scheme: dark) {
-    --palette-color-scheme: var(--palette-brand-dark-scheme);
+  [data-color-scheme="dark"] & {
+    --palette-color-scheme: var(--palette-alternate-dark-scheme);
   }
 }
 
@@ -55,12 +55,12 @@
     var(--palette-accent-light-border-color),
     var(--palette-accent-dark-border-color)
   );
-  @media (prefers-color-scheme: light) {
-    --palette-color-scheme: var(--palette-brand-light-scheme);
+  [data-color-scheme="light"] & {
+    --palette-color-scheme: var(--palette-accent-light-scheme);
   }
 
-  @media (prefers-color-scheme: dark) {
-    --palette-color-scheme: var(--palette-brand-dark-scheme);
+  [data-color-scheme="dark"] & {
+    --palette-color-scheme: var(--palette-accent-dark-scheme);
   }
 }
 
@@ -78,11 +78,11 @@
     var(--palette-brand-dark-border-color)
   );
 
-  @media (prefers-color-scheme: light) {
+  [data-color-scheme="light"] & {
     --palette-color-scheme: var(--palette-brand-light-scheme);
   }
 
-  @media (prefers-color-scheme: dark) {
+  [data-color-scheme="dark"] & {
     --palette-color-scheme: var(--palette-brand-dark-scheme);
   }
 }

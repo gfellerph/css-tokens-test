@@ -34,4 +34,10 @@ Example:
 
 It's not possible to have `@media (prefers-color-scheme: light)` to react to it's immediate environment. This will always react to the global user setting and is page wide either dark or light.
 
-## Body cannot have a palette class
+## `data-color-scheme` attribte on the body sets the page wide color scheme
+
+Otherwise it's not possible to invert the color scheme on palette classes.
+
+## Palette classes stay consistent when nested
+
+Every palette class keeps it's color, no matter if it's nested in a light or dark context. The scheme for palettes is always dependent on the body, the scheme of components is dependent on the body or any palette it's nested in.
