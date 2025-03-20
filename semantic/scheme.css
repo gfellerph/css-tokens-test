@@ -1,5 +1,3 @@
-/* UNUSED */
-
 :root {
   color-scheme: light dark;
 
@@ -128,38 +126,8 @@
 
 [data-color-scheme="light"] {
   color-scheme: light;
-  --palette-default-color-scheme: var(--palette-default-light-color-scheme);
-  --palette-alternate-color-scheme: var(--palette-alternate-light-color-scheme);
-  --palette-accent-color-scheme: var(--palette-accent-light-color-scheme);
-  --palette-brand-color-scheme: var(--palette-brand-light-color-scheme);
 }
 
 [data-color-scheme="dark"] {
   color-scheme: dark;
-  --palette-default-color-scheme: var(--palette-default-dark-color-scheme);
-  --palette-alternate-color-scheme: var(--palette-alternate-dark-color-scheme);
-  --palette-accent-color-scheme: var(--palette-accent-dark-color-scheme);
-  --palette-brand-color-scheme: var(--palette-brand-dark-color-scheme);
-}
-
-/* Optional auto coverage */
-[data-color-scheme="auto"] {
-  color-scheme: light dark;
-  @media (prefers-color-scheme: light) {
-    --palette-default-color-scheme: var(--palette-default-light-color-scheme);
-    --palette-alternate-color-scheme: var(
-      --palette-alternate-light-color-scheme
-    );
-    --palette-accent-color-scheme: var(--palette-accent-light-color-scheme);
-    --palette-brand-color-scheme: var(--palette-brand-light-color-scheme);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    --palette-default-color-scheme: var(--palette-default-dark-color-scheme);
-    --palette-alternate-color-scheme: var(
-      --palette-alternate-dark-color-scheme
-    );
-    --palette-accent-color-scheme: var(--palette-accent-dark-color-scheme);
-    --palette-brand-color-scheme: var(--palette-brand-dark-color-scheme);
-  }
 }

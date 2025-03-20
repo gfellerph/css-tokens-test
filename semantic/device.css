@@ -1,0 +1,20 @@
+@media (max-width: 600px) {
+  :scope {
+    --device: "mobile";
+    --input-padding: var(--input-padding-mobile);
+  }
+}
+
+@media (max-width: 900px) {
+  :scope {
+    --device: "tablet";
+    --input-padding: var(--input-padding-tablet);
+  }
+}
+
+@media (min-width: 900px) {
+  :scope {
+    --device: "desktop";
+    --input-padding: var(--input-padding-desktop);
+  }
+}

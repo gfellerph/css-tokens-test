@@ -1,0 +1,76 @@
+:scope {
+  --palette-default-light-scheme: light;
+  --palette-default-dark-scheme: dark;
+  --palette-default-light-background: var(--post-core-color-sandgrey-000);
+  --palette-default-dark-background: var(--post-core-color-sandgrey-080);
+  --palette-default-light-foreground: var(--post-core-color-sandgrey-090);
+  --palette-default-dark-foreground: var(--white);
+  --palette-default-light-border-color: var(--post-core-color-sandgrey-060);
+  --palette-default-dark-border-color: var(--post-core-color-sandgrey-020);
+
+  --palette-alternate-light-scheme: light;
+  --palette-alternate-dark-scheme: dark;
+  --palette-alternate-light-background: var(--post-core-color-sandgrey-012);
+  --palette-alternate-dark-background: var(--post-core-color-sandgrey-090);
+  --palette-alternate-light-foreground: var(--post-core-color-sandgrey-090);
+  --palette-alternate-dark-foreground: var(--white);
+  --palette-alternate-light-border-color: var(--post-core-color-sandgrey-070);
+  --palette-alternate-dark-border-color: var(--post-core-color-sandgrey-030);
+
+  --palette-accent-light-scheme: dark;
+  --palette-accent-dark-scheme: light;
+  --palette-accent-light-background: var(--post-core-color-sandgrey-080);
+  --palette-accent-dark-background: var(--post-core-color-sandgrey-000);
+  --palette-accent-light-foreground: var(--white);
+  --palette-accent-dark-foreground: var(--post-core-color-sandgrey-090);
+  --palette-accent-light-border-color: var(--post-core-color-sandgrey-060);
+  --palette-accent-dark-border-color: var(--post-core-color-sandgrey-020);
+
+  --palette-brand-light-scheme: light;
+  --palette-brand-dark-scheme: light;
+  --palette-brand-light-background: var(--yellow);
+  --palette-brand-dark-background: var(--yellow);
+  --palette-brand-light-foreground: var(--black);
+  --palette-brand-dark-foreground: var(--black);
+  --palette-brand-light-border-color: var(--black);
+  --palette-brand-dark-border-color: var(--black);
+
+  --palette-primary-light-scheme: dark;
+  --palette-primary-dark-scheme: light;
+  --palette-primary-light-background: var(--gray-80);
+  --palette-primary-dark-background: var(--white);
+  --palette-primary-light-foreground: var(--white);
+  --palette-primary-dark-foreground: var(--black);
+  --palette-primary-light-border-color: var(--black);
+  --palette-primary-dark-border-color: var(--white);
+}
+
+.cargo {
+  --palette-default-light-background: var(--post-core-color-sandgrey-000);
+  --palette-default-dark-background: var(--post-core-color-sandgrey-080);
+  --palette-default-light-foreground: var(--post-core-color-sandgrey-090);
+  --palette-default-dark-foreground: var(--white);
+  --palette-default-light-border-color: var(--post-core-color-sandgrey-060);
+  --palette-default-dark-border-color: var(--post-core-color-sandgrey-020);
+
+  --palette-alternate-light-background: var(--post-core-color-sandgrey-012);
+  --palette-alternate-dark-background: var(--post-core-color-sandgrey-090);
+  --palette-alternate-light-foreground: var(--post-core-color-sandgrey-090);
+  --palette-alternate-dark-foreground: var(--white);
+  --palette-alternate-light-border-color: var(--post-core-color-sandgrey-070);
+  --palette-alternate-dark-border-color: var(--post-core-color-sandgrey-030);
+
+  --palette-accent-light-background: var(--lightblue);
+  --palette-accent-dark-background: var(--lightblue);
+  --palette-accent-light-foreground: var(--black);
+  --palette-accent-dark-foreground: var(--black);
+  --palette-accent-light-border-color: var(--post-core-color-sandgrey-060);
+  --palette-accent-dark-border-color: var(--post-core-color-sandgrey-020);
+
+  --palette-brand-light-background: var(--darkgreen);
+  --palette-brand-dark-background: var(--darkgreen);
+  --palette-brand-light-foreground: var(--white);
+  --palette-brand-dark-foreground: var(--white);
+  --palette-brand-light-border-color: var(--white);
+  --palette-brand-dark-border-color: var(--white);
+}

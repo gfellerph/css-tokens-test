@@ -2,3 +2,34 @@
   outline: 2px solid var(--palette-default-foreground);
   outline-offset: 2px;
 }
+
+body {
+  background-color: var(--palette-default-background);
+  color: var(--palette-default-foreground);
+}
+
+button {
+  font: inherit;
+  font-weight: 700;
+  border-radius: 1000px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 150ms;
+  border-width: 2px;
+  border-style: solid;
+  padding: var(--input-padding);
+
+  background-color: var(--palette-primary-background);
+  color: var(--palette-primary-foreground);
+  border-color: var(--palette-primary-border-color);
+}
+
+[class*="palette-"] {
+  background-color: var(--palette-background);
+  color: var(--palette-foreground);
+  border-color: var(--palette-border-color);
+
+  & > *:not([class*="palette-"]) {
+    color-scheme: var(--palette-color-scheme);
+  }
+}
