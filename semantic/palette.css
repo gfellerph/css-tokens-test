@@ -1,32 +1,21 @@
 .palette-default {
-  --palette-background: light-dark(
-    var(--palette-default-light-background),
-    var(--palette-default-dark-background)
-  );
-  --palette-foreground: light-dark(
-    var(--palette-default-light-foreground),
-    var(--palette-default-dark-foreground)
-  );
-  --palette-border-color: light-dark(
-    var(--palette-default-light-border-color),
-    var(--palette-default-dark-border-color)
-  );
   [data-color-scheme="light"] & {
+    --palette-background: var(--palette-default-light-background);
+    --palette-foreground: var(--palette-default-light-foreground);
+    --palette-border-color: var(--palette-default-light-border-color);
     --palette-color-scheme: var(--palette-default-light-scheme);
+    --dot-background: var(--palette-alternate-light-background);
+    --dot-foreground: var(--palette-alternate-light-foregroud);
   }
 
   [data-color-scheme="dark"] & {
+    --palette-background: var(--palette-default-dark-background);
+    --palette-foreground: var(--palette-default-dark-foreground);
+    --palette-border-color: var(--palette-default-dark-border-color);
     --palette-color-scheme: var(--palette-default-dark-scheme);
+    --dot-background: var(--palette-alternate-dark-background);
+    --dot-foreground: var(--palette-alternate-dark-foregroud);
   }
-
-  --dot-background: light-dark(
-    var(--palette-alternate-light-background),
-    var(--palette-alternate-dark-background)
-  );
-  --dot-foreground: light-dark(
-    var(--palette-alternate-light-foreground),
-    var(--palette-alternate-dark-foreground)
-  );
 }
 
 .palette-alternate {

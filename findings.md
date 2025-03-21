@@ -67,3 +67,33 @@ To set each palettes color scheme, the selector depends on the presence of the `
 ## What does a fallback look like?
 
 The `light-dark` function is not supported enough, yet (https://caniuse.com/?search=light-dark). How can we implement a fallback to this function?
+
+### Palette layer
+
+#### Modern
+
+The modern approach simply relies on the current `color-scheme` that's set for this component.
+
+```css
+.palette-default {
+  --palette-background: light-dark(
+    var(--palette-default-light-background),
+    var(--palette-default-dark-background)
+  );
+}
+```
+
+#### Fallback
+
+The fallback relies on an attribute set to the body or any other ancestor element, but the fallback is easy to implement, but takes a little more code.
+
+```css
+.palette-default {
+  [data-color-scheme="light"] & {
+    --palette-background: var(--palette-default-light-background);
+  }
+  [data-color-scheme="dark"] & {
+    --palette-background: var(--palette-default-dark-background);
+  }
+}
+```
