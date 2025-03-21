@@ -33,3 +33,15 @@ button {
     color-scheme: var(--palette-color-scheme);
   }
 }
+
+.dot {
+  background-color: var(--dot-background);
+  color: var(--dot-foreground);
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 99rem;
+  flex: 0 0 3rem !important;
+  align-items: center;
+  justify-content: center;
+}

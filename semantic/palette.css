@@ -18,6 +18,15 @@
   [data-color-scheme="dark"] & {
     --palette-color-scheme: var(--palette-default-dark-scheme);
   }
+
+  --dot-background: light-dark(
+    var(--palette-alternate-light-background),
+    var(--palette-alternate-dark-background)
+  );
+  --dot-foreground: light-dark(
+    var(--palette-alternate-light-foreground),
+    var(--palette-alternate-dark-foreground)
+  );
 }
 
 .palette-alternate {
@@ -40,6 +49,15 @@
   [data-color-scheme="dark"] & {
     --palette-color-scheme: var(--palette-alternate-dark-scheme);
   }
+
+  --dot-background: light-dark(
+    var(--palette-default-light-background),
+    var(--palette-default-dark-background)
+  );
+  --dot-foreground: light-dark(
+    var(--palette-default-light-foreground),
+    var(--palette-default-dark-foreground)
+  );
 }
 
 .palette-accent {
@@ -55,13 +73,22 @@
     var(--palette-accent-light-border-color),
     var(--palette-accent-dark-border-color)
   );
+
   [data-color-scheme="light"] & {
     --palette-color-scheme: var(--palette-accent-light-scheme);
   }
-
   [data-color-scheme="dark"] & {
     --palette-color-scheme: var(--palette-accent-dark-scheme);
   }
+
+  --dot-background: light-dark(
+    var(--palette-alternate-light-background),
+    var(--palette-alternate-dark-background)
+  );
+  --dot-foreground: light-dark(
+    var(--palette-alternate-light-foreground),
+    var(--palette-alternate-dark-foreground)
+  );
 }
 
 .palette-brand {
@@ -85,4 +112,13 @@
   [data-color-scheme="dark"] & {
     --palette-color-scheme: var(--palette-brand-dark-scheme);
   }
+
+  --dot-background: light-dark(
+    var(--palette-accent-light-background),
+    var(--palette-accent-dark-background)
+  );
+  --dot-foreground: light-dark(
+    var(--palette-accent-light-foreground),
+    var(--palette-accent-dark-foreground)
+  );
 }
