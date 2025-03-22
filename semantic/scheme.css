@@ -1,21 +1,7 @@
 :root {
-  color-scheme: light dark;
-
   /* Surface Palettes */
 
   /* Default */
-  --palette-default-background: light-dark(
-    var(--palette-default-light-background),
-    var(--palette-default-dark-background)
-  );
-  --palette-default-foreground: light-dark(
-    var(--palette-default-light-foreground),
-    var(--palette-default-dark-foreground)
-  );
-  --palette-default-border-color: light-dark(
-    var(--palette-default-light-border-color),
-    var(--palette-default-dark-border-color)
-  );
 
   /* Alternate */
   --palette-alternate-background: light-dark(
@@ -124,10 +110,42 @@
   );
 }
 
-[data-color-scheme="light"] {
-  color-scheme: light;
+[data-color-scheme="light"],
+[data-color-scheme="light"] .palette-default > *:not([class*="palette-"]) {
+  /* Default */
+  --palette-default-background: var(--palette-default-light-background);
+  --palette-default-foreground: var(--palette-default-light-foreground);
+  --palette-default-border-color: var(--palette-default-light-border-color);
+  --palette-default-color-scheme: var(--palette-default-light-scheme);
+  --palette-deafult-lightcontrast-background: var(
+    --palette-alternate-light-background
+  );
+  --palette-default-lightcontrast-foreground: var(
+    --palette-alternate-light-foreground
+  );
+
+  /* Primary */
+  --palette-primary-background: var(--palette-primary-light-background);
+  --palette-primary-foreground: var(--palette-primary-light-foreground);
+  --palette-primary-border-color: var(--palette-primary-light-border-color);
 }
 
-[data-color-scheme="dark"] {
-  color-scheme: dark;
+[data-color-scheme="dark"],
+[data-color-scheme="dark"] .palette-default > *:not([class*="palette-"]) {
+  /* Default */
+  --palette-default-background: var(--palette-default-dark-background);
+  --palette-default-foreground: var(--palette-default-dark-foreground);
+  --palette-default-border-color: var(--palette-default-dark-border-color);
+  --palette-default-color-scheme: var(--palette-default-dark-scheme);
+  --palette-deafult-lightcontrast-background: var(
+    --palette-alternate-dark-background
+  );
+  --palette-deafult-lightcontrast-foreground: var(
+    --palette-alternate-dark-foreground
+  );
+
+  /* Primary */
+  --palette-primary-background: var(--palette-primary-dark-background);
+  --palette-primary-foreground: var(--palette-primary-dark-foreground);
+  --palette-primary-border-color: var(--palette-primary-dark-border-color);
 }

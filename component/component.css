@@ -35,8 +35,8 @@ button {
 }
 
 .dot {
-  background-color: var(--dot-background);
-  color: var(--dot-foreground);
+  background-color: var(--palette-lightcontrast-background);
+  color: var(--palette-lightcontrast-foreground);
   display: inline-flex;
   width: 3rem;
   height: 3rem;

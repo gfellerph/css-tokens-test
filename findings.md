@@ -97,3 +97,45 @@ The fallback relies on an attribute set to the body or any other ancestor elemen
   }
 }
 ```
+
+### Component layer
+
+The trickier part is that palettes need to switch up the color scheme based on their current background.
+
+#### Modern
+
+When `color-scheme` is available, it's easy. Just switch all child elements to the appropriate color scheme and the components `light-dark` function will handle it.
+
+```css
+[class*="palette-"] {
+  background-color: var(--palette-background);
+  color: var(--palette-foreground);
+  border-color: var(--palette-border-color);
+
+  /* Switch all child elements to the appropriate theme */
+  & > *:not([class*="palette-"]) {
+    color-scheme: var(--palette-color-scheme);
+  }
+}
+```
+
+#### Fallback
+
+This fallback happens on the scheme layer and needs to know the mode (aligned, inverted, static) of each palette. As it applies in the scheme layer as additional selectors, it does not duplicate any token definition, which is nice - but the requirement for knowing the mode makes it not straight forward to implement.
+
+```css
+[data-color-scheme="light"],
+[data-color-scheme="light"] .palette-default > *:not([class*="palette-"]) /* aligned */,
+[data-color-scheme="light"] .palette-alternate > *:not([class*="palette-"]) /* aligned */,
+[data-color-scheme="dark"] .palette-accent > *:not([class*="palette-"]) /* inverted */,
+.palette-brand > *:not([class*="palette-"]) /* static */ {
+  /* All light scheme tokens */
+}
+
+[data-color-scheme: "dark"], [data-color-scheme= "dark"] .palette-default > *:not([class*="palette-"])
+    /* aligned */, [data-color-scheme= "dark"] .palette-alternate > *:not([class*="palette-"]) /* aligned */,
+  [data-color-scheme= "light"] .palette-accent > *:not([class*="palette-"]) /* inverted */
+    /* no palette brand here */ {
+  /* All dark scheme tokens */
+}
+```

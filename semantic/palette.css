@@ -1,21 +1,14 @@
 .palette-default {
-  [data-color-scheme="light"] & {
-    --palette-background: var(--palette-default-light-background);
-    --palette-foreground: var(--palette-default-light-foreground);
-    --palette-border-color: var(--palette-default-light-border-color);
-    --palette-color-scheme: var(--palette-default-light-scheme);
-    --dot-background: var(--palette-alternate-light-background);
-    --dot-foreground: var(--palette-alternate-light-foregroud);
-  }
-
-  [data-color-scheme="dark"] & {
-    --palette-background: var(--palette-default-dark-background);
-    --palette-foreground: var(--palette-default-dark-foreground);
-    --palette-border-color: var(--palette-default-dark-border-color);
-    --palette-color-scheme: var(--palette-default-dark-scheme);
-    --dot-background: var(--palette-alternate-dark-background);
-    --dot-foreground: var(--palette-alternate-dark-foregroud);
-  }
+  --palette-background: var(--palette-default-background);
+  --palette-foreground: var(--palette-default-foreground);
+  --palette-border-color: var(--palette-default-border-color);
+  /*--palette-color-scheme: var(--palette-default-scheme);*/
+  --palette-lightcontrast-background: var(
+    --palette-default-lightcontrast-background
+  );
+  --palette-lightcontrast-foreground: var(
+    --palette-default-lightcontrast-foreground
+  );
 }
 
 .palette-alternate {
@@ -39,11 +32,11 @@
     --palette-color-scheme: var(--palette-alternate-dark-scheme);
   }
 
-  --dot-background: light-dark(
+  --palette-lightcontrast-background: light-dark(
     var(--palette-default-light-background),
     var(--palette-default-dark-background)
   );
-  --dot-foreground: light-dark(
+  --palette-lightcontrast-foreground: light-dark(
     var(--palette-default-light-foreground),
     var(--palette-default-dark-foreground)
   );
@@ -70,11 +63,11 @@
     --palette-color-scheme: var(--palette-accent-dark-scheme);
   }
 
-  --dot-background: light-dark(
+  --palette-lightcontrast-background: light-dark(
     var(--palette-alternate-light-background),
     var(--palette-alternate-dark-background)
   );
-  --dot-foreground: light-dark(
+  --palette-lightcontrast-foreground: light-dark(
     var(--palette-alternate-light-foreground),
     var(--palette-alternate-dark-foreground)
   );
@@ -102,11 +95,11 @@
     --palette-color-scheme: var(--palette-brand-dark-scheme);
   }
 
-  --dot-background: light-dark(
+  --palette-lightcontrast-background: light-dark(
     var(--palette-accent-light-background),
     var(--palette-accent-dark-background)
   );
-  --dot-foreground: light-dark(
+  --palette-lightcontrast-foreground: light-dark(
     var(--palette-accent-light-foreground),
     var(--palette-accent-dark-foreground)
   );
