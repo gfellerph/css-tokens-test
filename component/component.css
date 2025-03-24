@@ -28,10 +28,6 @@ button {
   background-color: var(--palette-background);
   color: var(--palette-foreground);
   border-color: var(--palette-border-color);
-
-  & > *:not([class*="palette-"]) {
-    color-scheme: var(--palette-color-scheme);
-  }
 }
 
 .dot {
