@@ -12,95 +12,40 @@
 }
 
 .palette-alternate {
-  --palette-background: light-dark(
-    var(--palette-alternate-light-background),
-    var(--palette-alternate-dark-background)
+  --palette-background: var(--palette-alternate-background);
+  --palette-foreground: var(--palette-alternate-foreground);
+  --palette-border-color: var(--palette-alternate-border-color);
+  /*--palette-color-scheme: var(--palette-alternate-scheme);*/
+  --palette-lightcontrast-background: var(
+    --palette-alternate-lightcontrast-background
   );
-  --palette-foreground: light-dark(
-    var(--palette-alternate-light-foreground),
-    var(--palette-alternate-dark-foreground)
-  );
-  --palette-border-color: light-dark(
-    var(--palette-alternate-light-border-color),
-    var(--palette-alternate-dark-border-color)
-  );
-  [data-color-scheme="light"] & {
-    --palette-color-scheme: var(--palette-alternate-light-scheme);
-  }
-
-  [data-color-scheme="dark"] & {
-    --palette-color-scheme: var(--palette-alternate-dark-scheme);
-  }
-
-  --palette-lightcontrast-background: light-dark(
-    var(--palette-default-light-background),
-    var(--palette-default-dark-background)
-  );
-  --palette-lightcontrast-foreground: light-dark(
-    var(--palette-default-light-foreground),
-    var(--palette-default-dark-foreground)
+  --palette-lightcontrast-foreground: var(
+    --palette-alternate-lightcontrast-foreground
   );
 }
 
 .palette-accent {
-  --palette-background: light-dark(
-    var(--palette-accent-light-background),
-    var(--palette-accent-dark-background)
+  --palette-background: var(--palette-accent-background);
+  --palette-foreground: var(--palette-accent-foreground);
+  --palette-border-color: var(--palette-accent-border-color);
+  /*--palette-color-scheme: var(--palette-accent-scheme);*/
+  --palette-lightcontrast-background: var(
+    --palette-accent-lightcontrast-background
   );
-  --palette-foreground: light-dark(
-    var(--palette-accent-light-foreground),
-    var(--palette-accent-dark-foreground)
-  );
-  --palette-border-color: light-dark(
-    var(--palette-accent-light-border-color),
-    var(--palette-accent-dark-border-color)
-  );
-
-  [data-color-scheme="light"] & {
-    --palette-color-scheme: var(--palette-accent-light-scheme);
-  }
-  [data-color-scheme="dark"] & {
-    --palette-color-scheme: var(--palette-accent-dark-scheme);
-  }
-
-  --palette-lightcontrast-background: light-dark(
-    var(--palette-alternate-light-background),
-    var(--palette-alternate-dark-background)
-  );
-  --palette-lightcontrast-foreground: light-dark(
-    var(--palette-alternate-light-foreground),
-    var(--palette-alternate-dark-foreground)
+  --palette-lightcontrast-foreground: var(
+    --palette-accent-lightcontrast-foreground
   );
 }
 
 .palette-brand {
-  --palette-background: light-dark(
-    var(--palette-brand-light-background),
-    var(--palette-brand-dark-background)
+  --palette-background: var(--palette-brand-background);
+  --palette-foreground: var(--palette-brand-foreground);
+  --palette-border-color: var(--palette-brand-border-color);
+  /*--palette-color-scheme: var(--palette-brand-scheme);*/
+  --palette-lightcontrast-background: var(
+    --palette-brand-lightcontrast-background
   );
-  --palette-foreground: light-dark(
-    var(--palette-brand-light-foreground),
-    var(--palette-brand-dark-foreground)
-  );
-  --palette-border-color: light-dark(
-    var(--palette-brand-light-border-color),
-    var(--palette-brand-dark-border-color)
-  );
-
-  [data-color-scheme="light"] & {
-    --palette-color-scheme: var(--palette-brand-light-scheme);
-  }
-
-  [data-color-scheme="dark"] & {
-    --palette-color-scheme: var(--palette-brand-dark-scheme);
-  }
-
-  --palette-lightcontrast-background: light-dark(
-    var(--palette-accent-light-background),
-    var(--palette-accent-dark-background)
-  );
-  --palette-lightcontrast-foreground: light-dark(
-    var(--palette-accent-light-foreground),
-    var(--palette-accent-dark-foreground)
+  --palette-lightcontrast-foreground: var(
+    --palette-brand-lightcontrast-foreground
   );
 }
