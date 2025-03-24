@@ -132,10 +132,11 @@ This fallback happens on the scheme layer and needs to know the mode (aligned, i
   /* All light scheme tokens */
 }
 
-[data-color-scheme: "dark"], [data-color-scheme= "dark"] .palette-default > *:not([class*="palette-"])
-    /* aligned */, [data-color-scheme= "dark"] .palette-alternate > *:not([class*="palette-"]) /* aligned */,
-  [data-color-scheme= "light"] .palette-accent > *:not([class*="palette-"]) /* inverted */
-    /* no palette brand here */ {
+[data-color-scheme: "dark"],
+[data-color-scheme="dark"] .palette-default > *:not([class*="palette-"]) /* aligned */,
+[data-color-scheme= "dark"] .palette-alternate > *:not([class*="palette-"]) /* aligned */,
+[data-color-scheme= "light"] .palette-accent > *:not([class*="palette-"]) /* inverted */
+/* no palette brand here */ {
   /* All dark scheme tokens */
 }
 ```
